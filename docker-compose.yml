@@ -1,0 +1,14 @@
+version: "2.4"
+services:
+  ros:
+    build:
+        context: .
+        dockerfile: Dockerfile
+        args:
+          - PASSWD=YOUR_PASSWORD
+    privileged: true
+    ports:
+      - 'YOUR_PORT:22'
+    volumes: 
+      - /YOUR/SAVE/DIRECTORT/:/root
+    restart: always
